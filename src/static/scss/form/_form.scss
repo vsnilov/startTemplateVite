@@ -1,0 +1,43 @@
+.f-form {
+}
+
+.f-form--subscribe {
+  display: flex;
+  position: relative;
+  width: 476px;
+  @include sm() {
+    display: block;
+    width: 100%;
+  }
+
+  .f-input {
+    width: auto;
+    flex: auto;
+    @include sm() {
+      width: 100%;
+    }
+  }
+}
+
+.f-form--subscribe__btn {
+  margin-left: 20px;
+  @include sm() {
+    margin: 20px 0 0;
+  }
+}
+
+.f-form-search--header {
+  position: relative;
+  margin-left: 20px;
+  flex: auto;
+  @include lg() {
+    display: block;
+    margin-top: 20px;
+    grid-area: c;
+  }
+
+  button {
+    @include centered("y");
+    right: 20px;
+  }
+}

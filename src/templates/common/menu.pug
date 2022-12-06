@@ -1,0 +1,12 @@
+//- .g-menu.g-menu-mobile.fadein(data-element-wrap="menu")
+  button.g-menu__close(type="button", data-element-close="menu")
+      +svg('close')
+  div Мобильное меню
+
+//- nav.g-menu
+  ul.g-menu__list
+    each link,title in nav.menu
+      li.g-menu__item
+        a.g-menu__link(href=link data-scroll)= title
+
++menu(menu.aside, 'g-aside')

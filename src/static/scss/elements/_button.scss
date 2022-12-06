@@ -1,0 +1,20 @@
+.e-btn {
+  display: inline-block;
+  min-width: 125px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: $color-black;
+  transition: $transition-base;
+  padding: 20px 25px;
+  max-width: max-content;
+
+  &:hover {
+    color: #fff;
+    background-color: rgba($color-black, 0.8);
+  }
+}

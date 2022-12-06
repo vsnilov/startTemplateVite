@@ -1,0 +1,15 @@
+.f-label {
+  display: block;
+  text-align: left;
+
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+}
+
+.f-label__validation {
+  display: block;
+  color: $color-primary;
+  font-size: 10px;
+  opacity: 0;
+}

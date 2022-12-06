@@ -1,0 +1,66 @@
+.section {
+  margin: var(--section-offset) 0;
+}
+
+.section-inner {
+  padding: var(--section-offset) 0;
+}
+
+.section-inner--big {
+  padding: 150px 0;
+  @include lg() {
+    padding: var(--section-offset) 0;
+  }
+}
+
+.section-inner--base {
+  padding: 100px 0;
+  @include lg() {
+    padding: var(--section-offset) 0;
+  }
+}
+.section--mini {
+  margin: var(--margin-section) 0;
+}
+.section--mini-offset {
+  padding: var(--margin-section) 0;
+}
+
+.section-bg {
+  padding: 1px;
+}
+
+.section-inner--mini-gray {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 33vw;
+    height: 100%;
+    background-color: $color-gray;
+    top: 50px;
+    @include lg() {
+      content: none;
+    }
+  }
+  & > * {
+    position: relative;
+  }
+}
+
+.section-inner--subscribe {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    @include bgi("/src/static/img/svg-img/bg_subscribe.svg", contain, right);
+    right: 3.75vw;
+    bottom: 0;
+    height: 495px;
+    width: 100%;
+    @include lg() {
+      content: none;
+    }
+  }
+}

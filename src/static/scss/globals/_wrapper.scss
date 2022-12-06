@@ -1,0 +1,23 @@
+.g-wrapper {
+  display: grid;
+  grid-template-columns: var(--width-aside) minmax(0, 1fr);
+  @include lg {
+    display: block;
+  }
+}
+
+.g-wrapper__inner {
+  position: relative;
+  margin: 0 var(--margin-wrapper-inner-right) 0 var(--margin-wrapper-inner-left);
+  @include lg {
+    margin: 0;
+  }
+
+  .c-contacts {
+    margin: 0 calc(var(--margin) * -1);
+  }
+
+  &.margin-right-0 .c-contacts {
+    margin: 0 0 0 calc(var(--margin) * -1);
+  }
+}

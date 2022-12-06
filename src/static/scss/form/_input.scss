@@ -1,0 +1,27 @@
+.f-input {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid rgba($color-black, 0.2);
+  outline: 0 !important;
+  transition: $transition-base;
+  border-radius: 5px;
+  @include lg {
+    font-size: 16px;
+  }
+
+  &:hover {
+    border-color: rgba($color-black, 0.5);
+  }
+
+  &:focus {
+    border-color: $color-black;
+  }
+
+  &:required:valid {
+    border-color: $color-black;
+  }
+
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+}

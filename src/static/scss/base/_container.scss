@@ -1,0 +1,12 @@
+.container {
+  max-width: calc(var(--width-container) + 100px);
+  margin: 0 auto;
+  padding: 0 50px;
+  @include lg {
+    margin: 0 var(--container-margin);
+    padding: 0;
+  }
+  @include sm {
+    margin: 0 var(--container-margin);
+  }
+}

@@ -1,0 +1,36 @@
+.f-search {
+  display: flex;
+}
+
+.f-search--header {
+  @include lg {
+    margin-left: auto;
+  }
+}
+
+.f-search__btn {
+  line-height: 1;
+}
+
+.f-search__input {
+  width: 170px;
+  margin-left: 10px;
+  font-weight: 400;
+  transition: all 0.2s;
+  @include lg {
+    display: none;
+  }
+
+  &::placeholder {
+    color: #fff;
+  }
+
+  &:hover {
+    transform: translateX(3px);
+    transition: all 0.3s;
+
+    &::placeholder {
+      font-weight: 600;
+    }
+  }
+}

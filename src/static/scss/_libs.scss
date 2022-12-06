@@ -1,0 +1,29 @@
+@import "normalize.css/normalize.css";
+// @import '@fancyapps/ui/src/Fancybox/Fancybox';
+@import "swiper/css";
+@import "swiper/css/effect-fade";
+
+$hamburger-layer-color: #333;
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: 18px;
+$hamburger-layer-height: 2px;
+$hamburger-layer-spacing: 4px;
+$hamburger-layer-border-radius: 5px;
+$hamburger-types: (spin);
+@import "hamburgers/_sass/hamburgers/hamburgers";
+
+.hamburger {
+  position: relative;
+  top: 2px;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}

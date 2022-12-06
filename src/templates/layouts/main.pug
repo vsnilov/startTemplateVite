@@ -1,0 +1,19 @@
+include ../mixins
+include ../common/aside
+block variables
+
+//-include ../common/menu-mobile
+include ../common/header
+main.g-main
+  .bg-gray
+    if breadcrumbs
+      .container
+        include ../common/breadcrumb
+    if h1
+      .container
+        h1=h1
+    block contentHeader
+  block content
+include ../common/footer
+.hide
+  include ../common/modal

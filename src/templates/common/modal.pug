@@ -1,0 +1,13 @@
+.g-modal.g-modal--base#callback
+  .g-modal__title Обратный звонок
+  .g-modal__text Отставьте контакты и наш менеджер перезвонить Вам в ближайшее время
+  form.f-form(action="#")
+    .f-form__inner
+      .f-label
+        input.f-input(type="text", placeholder="Имя")
+      label.f-label
+        input.f-input(type="tel", placeholder="Телефон*", required, data-mask="phone")
+        span.f-label__validation Заполните телефон
+    button.e-btn.e-btn--full заказать звонок
+    .f-agreement Нажимая "Заказать звонок", Вы соглашаетесь <br>
+      a.f-agreement__link(href="javascript::void(0)")  с обработкой персональных данных

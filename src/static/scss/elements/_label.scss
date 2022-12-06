@@ -1,0 +1,29 @@
+.e-label {
+  display: inline-block;
+  border: 1px solid var(--color);
+  color: var(--color);
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 600;
+  padding: 3px 10px 2px;
+  text-align: center;
+  max-width: max-content;
+}
+
+.e-label--full {
+  background-color: var(--color);
+  color: #fff;
+}
+
+.e-label--red {
+  --color: var(--color-red);
+}
+
+.e-label--sale {
+  --color: var(--color-red);
+}
+
+.e-label--new {
+  --color: var(--color-primary);
+}

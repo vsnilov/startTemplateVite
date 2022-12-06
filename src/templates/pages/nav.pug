@@ -1,0 +1,14 @@
+extends ../layouts/main
+
+block variables
+  -
+    const title = 'Страницы'
+    const description = 'Начало пути'
+
+block content
+  .section
+    .container
+      ul.ul
+        for pagesItem in nav
+          li
+            a(href=pagesItem.link)=pagesItem.title

@@ -1,0 +1,25 @@
+{
+  "contacts": {
+    "phone":{
+      "tel": "+7 (111) 111-11-11",
+      "telLink": "tel:+71111111111"
+    },
+    "email": "info@mail.ru",
+    "address": "г. Санкт-Петербург"
+  },
+  "copyright": "2022 ©",
+  "menu": {
+    "header":[
+      {
+        "title": "Навигация",
+        "link": "nav.html"
+      }
+    ]
+  },
+  "nav":[
+    {
+      "title": "Главная",
+      "link": "index.html"
+    }
+  ]
+}

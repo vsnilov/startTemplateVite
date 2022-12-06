@@ -1,0 +1,24 @@
+.g-dropdown {
+  position: relative;
+}
+
+.g-dropdown-list {
+  .g-dropdown.is-active & {
+    display: block;
+  }
+}
+
+.g-dropdown.is-active .svg-sprite-icon-arrow-b {
+  transform: rotate(180deg);
+}
+
+.g-dropdown-icon {
+  display: none;
+  @include centered("y");
+  right: 20px;
+  width: 10px;
+  height: 5px;
+  @include sm() {
+    display: block;
+  }
+}

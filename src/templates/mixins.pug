@@ -1,0 +1,41 @@
+mixin svg(id, className='')
+  svg(class=`svg-sprite-icon svg-sprite-icon-${id} ${className}`)&attributes(attributes)
+    use(xlink:href=`#icon-${id}`)
+
+mixin icon(name,mod='')
+  i(class="e-icon e-icon-" + name + ' ' + mod)
+
+mixin menu(menu, className='global', dataMenu='wrap', classLink= '', level=1)
+  ul(class=`${className}-menu level-${level}` data-menu=dataMenu)
+    each menuItem in menu
+      li(class=`${className}-menu__item ${menuItem.items ? 'is_parent' : ''}` data-menu=`${menuItem.items ? 'parent' : ''}`)
+        a(class=`${className}-menu__link ${classLink}` href=`${menuItem.link || 'javascript:void'}` data-menu=`${menuItem.items ? 'link' : ''}`)
+          if (menuItem.icon)
+            div(class=`${className}-menu__icon`)
+              +icon(menuItem.icon)
+          span= menuItem.title
+          if (menuItem.items)
+            +svg('menu-next')
+        if (menuItem.items)
+          +menu(menuItem.items, className, `submenu`, classLink, level+1)
+
+mixin dropdown(list, className='global')
+  - const listAll = list.items || list
+   if list.title
+    a.g-dropdown-list__link.is-parent(class=`${className}__link` href=`${list.link || 'javascript:void'}`)=list.title
+  .g-dropdown(class=`${className}`)
+    .g-dropdown__title(class=`${className}__title`)= list.title || listAll[0].title
+      +svg('arrow-b')
+    ul.g-dropdown-list.fadein(class=`${className}__list`)
+      if list.title
+        li.g-dropdown-list__item(class=`${className}__item`)
+          a.g-dropdown-list__link(class=`${className}__link` href=`${list.link || 'javascript:void'}`)=list.title
+      each listItem in listAll
+        li.g-dropdown-list__item(class=`${className}__item`)
+          a.g-dropdown-list__link(class=`${className}__link` href=`${listItem.link || 'javascript:void'}`)=listItem.title
+
+mixin dropdownMenu(menu, className='global')
+  ul(class=`${className}__list`)
+    each menuItem in menu
+      li(class=`${className}__item`)
+        +dropdown(menuItem, className)
