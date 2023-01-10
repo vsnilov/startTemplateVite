@@ -19,6 +19,10 @@ export default defineConfig({
   build: {
     //minify: false,
     rollupOptions: {
+      input: {
+        main: "./index.html",
+        nav: "./nav.html",
+      },
       output: {
         entryFileNames: `assets/[name].js`,
         chunkFileNames: `assets/[name].js`,
