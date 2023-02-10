@@ -1,3 +1,5 @@
+import './vue/index';
+
 import './components/svgSprites';
 import 'lazysizes';
 
