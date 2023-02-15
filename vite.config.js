@@ -19,32 +19,32 @@ export default defineConfig({
     }),
     vue(),
     viteImagemin({
-      gifsicle: {
-        optimizationLevel: 7,
-        interlaced: false,
+      gifsicle : {
+          optimizationLevel : 7,
+          interlaced : false,
       },
-      optipng: {
-        optimizationLevel: 7,
+      optipng : {
+          optimizationLevel : 7,
       },
-      mozjpeg: {
-        quality: 0,
+      mozjpeg : {
+          quality : 90,
       },
-      pngquant: {
-        quality: [0.8, 0.9],
-        speed: 4,
+      pngquant : {
+          quality : [0.8, 0.9],
+          speed : 4,
       },
-      svgo: {
-        plugins: [
-          {
-            name: 'removeViewBox',
-          },
-          {
-            name: 'removeEmptyAttrs',
-            active: false,
-          },
-        ],
+      svgo : {
+          plugins : [
+              {
+                  name : 'removeViewBox',
+              },
+              {
+                  name : 'removeEmptyAttrs',
+                  active : false,
+              },
+          ],
       },
-    }),
+  }),
   ],
   resolve: { alias: { 'vue': 'vue/dist/vue.esm-bundler.js' } },
   build: {
